@@ -1,0 +1,15 @@
+framework module PoDoFo {
+    umbrella header "podofo.h"
+    explicit module Base {
+        header "podofo.h"
+        export *
+    }
+    module PodofoWrapper {
+        header "PodofoWrapper.h"
+        export *
+    }
+
+    export *
+    link "c++"
+    link "c++abi"
+}
