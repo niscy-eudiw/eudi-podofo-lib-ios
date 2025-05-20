@@ -71,7 +71,8 @@ namespace PoDoFo {
             const std::string& documentOutputPath,
             const std::string& endCertificateBase64,
             const std::vector<std::string>& certificateChainBase64,
-            const std::optional<std::string>& rootEntityCertificateBase64 = std::nullopt
+            const std::optional<std::string>& rootEntityCertificateBase64 = std::nullopt,
+            const std::optional<std::string>& label = std::nullopt
         );
 
         PdfRemoteSignDocumentSession(const PdfRemoteSignDocumentSession&) = delete;
@@ -102,6 +103,7 @@ namespace PoDoFo {
         std::string                                 _endCertificateBase64;
         std::vector<std::string>                    _certificateChainBase64;
         std::optional<std::string>                  _rootCertificateBase64;
+        std::optional<std::string>                  _label;
         std::vector<unsigned char>                  _endCertificateDer;
         std::vector<std::vector<unsigned char>>     _certificateChainDer;
         std::vector<unsigned char>                  _rootCertificateDer;
